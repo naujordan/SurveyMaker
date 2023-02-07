@@ -56,5 +56,29 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="PostDeploy" />
+    <Folder Include="PreDeploy" />
+    <Folder Include="Tables" />
+    <Folder Include="PostDeploy\DefaultData" />
+    <Folder Include="ForeignKeys" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\tblQuestion.sql" />
+    <Build Include="Tables\tblAnswer.sql" />
+    <Build Include="Tables\tblQuestionAnswer.sql" />
+    <Build Include="ForeignKeys\fkAnswerId.sql" />
+    <Build Include="ForeignKeys\fkQuestionId.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostDeploy\Script.PostDeployment1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="PreDeploy\Script.PreDeployment1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PostDeploy\DefaultData\Question.sql" />
+    <None Include="PostDeploy\DefaultData\Answer.sql" />
+    <None Include="PostDeploy\DefaultData\QuestionAnswer.sql" />
+    <None Include="local.publish.xml" />
   </ItemGroup>
 </Project>
