@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="delete.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JTN.SurveyMaker.BL.Models\JTN.SurveyMaker.BL.Models.csproj" />
+    <ProjectReference Include="..\JTN.SurveyMaker.BL\JTN.SurveyMaker.BL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="delete.jpg" />
+  </ItemGroup>
+
+</Project>

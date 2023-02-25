@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JTN.SurveyMaker.BL.Models", "JTN.SurveyMaker.BL.Models\JTN.SurveyMaker.BL.Models.csproj", "{2DEBA78E-8C72-4498-9799-5E820BE26461}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JTN.SurveyMaker.BL.Models", "JTN.SurveyMaker.BL.Models\JTN.SurveyMaker.BL.Models.csproj", "{2DEBA78E-8C72-4498-9799-5E820BE26461}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JTN.SurveyMaker.PL", "JTN.SurveyMaker.PL\JTN.SurveyMaker.PL.csproj", "{08C5BE6E-0A70-417E-9E61-493DFE547653}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JTN.SurveyMaker.PL", "JTN.SurveyMaker.PL\JTN.SurveyMaker.PL.csproj", "{08C5BE6E-0A70-417E-9E61-493DFE547653}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "JTN.SurveyMaker.DB", "JTN.SurveyMaker.DB\JTN.SurveyMaker.DB.sqlproj", "{75B7D1D0-33BB-4945-96D2-19C198E90A36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JTN.SurveyMaker.PL.Test", "JTN.SurveyMaker.PL.Test\JTN.SurveyMaker.PL.Test.csproj", "{54A1B847-4654-4BD6-9A52-918F1A76E0D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JTN.SurveyMaker.PL.Test", "JTN.SurveyMaker.PL.Test\JTN.SurveyMaker.PL.Test.csproj", "{54A1B847-4654-4BD6-9A52-918F1A76E0D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JTN.SurveyMaker.BL", "JTN.SurveyMaker.BL\JTN.SurveyMaker.BL.csproj", "{BD960537-6061-4A24-8487-1A032E9A7211}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JTN.SurveyMaker.WPFUI", "JTN.SurveyMaker.WPFUI\JTN.SurveyMaker.WPFUI.csproj", "{5A8B933D-55BD-48FF-B9DF-F60F7A39A7AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JTN.SurveyMaker.BL.Test", "JTN.SurveyMaker.BL.Test\JTN.SurveyMaker.BL.Test.csproj", "{C2397ED0-944A-4E93-A271-A6D9D8E30702}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +41,18 @@ Global
 		{54A1B847-4654-4BD6-9A52-918F1A76E0D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54A1B847-4654-4BD6-9A52-918F1A76E0D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54A1B847-4654-4BD6-9A52-918F1A76E0D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD960537-6061-4A24-8487-1A032E9A7211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD960537-6061-4A24-8487-1A032E9A7211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD960537-6061-4A24-8487-1A032E9A7211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD960537-6061-4A24-8487-1A032E9A7211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A8B933D-55BD-48FF-B9DF-F60F7A39A7AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A8B933D-55BD-48FF-B9DF-F60F7A39A7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A8B933D-55BD-48FF-B9DF-F60F7A39A7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A8B933D-55BD-48FF-B9DF-F60F7A39A7AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2397ED0-944A-4E93-A271-A6D9D8E30702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2397ED0-944A-4E93-A271-A6D9D8E30702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2397ED0-944A-4E93-A271-A6D9D8E30702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2397ED0-944A-4E93-A271-A6D9D8E30702}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

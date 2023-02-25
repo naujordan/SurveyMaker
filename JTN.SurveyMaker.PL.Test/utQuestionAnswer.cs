@@ -85,5 +85,11 @@ namespace JTN.SurveyMaker.PL.Test
 
             Assert.IsNull(deletedrow);
         }
+
+        [TestMethod]
+        public void LazyLoadingTest()
+        {
+            Assert.IsNotNull(dc.tblQuestionAnswers.FirstOrDefault().Answer);
+        }
     }
 }

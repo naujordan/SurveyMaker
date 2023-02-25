@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="JTN.SurveyMaker.WPFUI.ucAnswer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JTN.SurveyMaker.WPFUI"
+             mc:Ignorable="d" 
+                d:DesignHeight="51" d:DesignWidth="453">
+    <Grid>
+        <Grid HorizontalAlignment="Center" Height="51" VerticalAlignment="Center" Width="453">
+            <ComboBox 
+                x:Name="cboAnswer" 
+                HorizontalAlignment="Left" 
+                Width="331" VerticalAlignment="Center" Margin="37,0,0,0" Height="51" SelectionChanged="cboAnswer_SelectionChanged"/>
+            <Image 
+                x:Name="imgDelete" 
+                HorizontalAlignment="Left" 
+                Height="51" 
+                VerticalAlignment="Center" 
+                Stretch="Fill"
+                Width="50" Source="/delete.jpg" Margin="390,0,0,0" />
+            <RadioButton Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Margin="10,17,0,0" x:Name="rdoCorrect"/>
+        </Grid>
+    </Grid>
+</UserControl>
