@@ -15,7 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JTN.SurveyMaker.BL", "JTN.S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JTN.SurveyMaker.WPFUI", "JTN.SurveyMaker.WPFUI\JTN.SurveyMaker.WPFUI.csproj", "{5A8B933D-55BD-48FF-B9DF-F60F7A39A7AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JTN.SurveyMaker.BL.Test", "JTN.SurveyMaker.BL.Test\JTN.SurveyMaker.BL.Test.csproj", "{C2397ED0-944A-4E93-A271-A6D9D8E30702}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JTN.SurveyMaker.BL.Test", "JTN.SurveyMaker.BL.Test\JTN.SurveyMaker.BL.Test.csproj", "{C2397ED0-944A-4E93-A271-A6D9D8E30702}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JTN.SurveyMaker.API", "JTN.SurveyMaker.API\JTN.SurveyMaker.API.csproj", "{EB584A18-36A8-4EBF-9769-6C89716A864D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JTN.SurveyMaker.API.Test", "JTN.SurveyMaker.API.Test\JTN.SurveyMaker.API.Test.csproj", "{81886897-2189-45AA-B852-1C81ED61B1C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JTN.Utility", "JTN.Utility\JTN.Utility.csproj", "{5EEC3836-482B-48F0-BD5B-7A28D46D0CAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +59,18 @@ Global
 		{C2397ED0-944A-4E93-A271-A6D9D8E30702}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2397ED0-944A-4E93-A271-A6D9D8E30702}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2397ED0-944A-4E93-A271-A6D9D8E30702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB584A18-36A8-4EBF-9769-6C89716A864D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB584A18-36A8-4EBF-9769-6C89716A864D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB584A18-36A8-4EBF-9769-6C89716A864D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB584A18-36A8-4EBF-9769-6C89716A864D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81886897-2189-45AA-B852-1C81ED61B1C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81886897-2189-45AA-B852-1C81ED61B1C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81886897-2189-45AA-B852-1C81ED61B1C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81886897-2189-45AA-B852-1C81ED61B1C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EEC3836-482B-48F0-BD5B-7A28D46D0CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EEC3836-482B-48F0-BD5B-7A28D46D0CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EEC3836-482B-48F0-BD5B-7A28D46D0CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EEC3836-482B-48F0-BD5B-7A28D46D0CAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

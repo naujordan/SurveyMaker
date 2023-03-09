@@ -68,6 +68,11 @@
     <Build Include="Tables\tblQuestionAnswer.sql" />
     <Build Include="ForeignKeys\fkAnswerId.sql" />
     <Build Include="ForeignKeys\fkQuestionId.sql" />
+    <Build Include="Tables\tblActivation.sql" />
+    <Build Include="ForeignKeys\fkQuestionIdActivationTable.sql" />
+    <Build Include="Tables\tblResponse.sql" />
+    <Build Include="ForeignKeys\fkQuestionIdResponseTable.sql" />
+    <Build Include="ForeignKeys\fkAnswerIdResponseTable.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeploy\Script.PostDeployment1.sql" />
@@ -80,5 +85,7 @@
     <None Include="PostDeploy\DefaultData\Answer.sql" />
     <None Include="PostDeploy\DefaultData\QuestionAnswer.sql" />
     <None Include="local.publish.xml" />
+    <None Include="PostDeploy\DefaultData\Activation.sql" />
+    <None Include="PostDeploy\DefaultData\Response.sql" />
   </ItemGroup>
 </Project>

@@ -112,7 +112,7 @@ namespace JTN.SurveyMaker.BL
             try
             {
                 List<Question> questions = new List<Question>();
-                await Task.Run(() =>
+                await Task.Run(async () =>
                     {
                         using (SurveyMakerEntities dc = new SurveyMakerEntities())
                         {
@@ -128,6 +128,15 @@ namespace JTN.SurveyMaker.BL
                                         Id = qa.AnswerId, isCorrect = qa.isCorrect, Text = qa.Answer.Answer
                                     };
                                     question.Answers.Add(answer);
+                                }
+                                question.Activations = new List<Activation>();
+                                foreach (tblActivation a in q.tblActivations.ToList())
+                                {
+                                    Activation activation = new Activation
+                                    {
+                                        Id = a.Id, QuestionId = a.QuestionId, ActivationCode= a.ActivationCode, EndDate= a.EndDate, StartDate = a.StartDate
+                                    };
+                                    question.Activations.Add(activation);
                                 }
                                 questions.Add(question);
                             }
@@ -167,6 +176,19 @@ namespace JTN.SurveyMaker.BL
                             };
                             question.Answers.Add(answer);
                         }
+                        question.Activations = new List<Activation>();
+                        foreach (tblActivation a in tblQuestion.tblActivations.ToList())
+                        {
+                            Activation activation = new Activation
+                            {
+                                Id = a.Id,
+                                QuestionId = question.Id,
+                                ActivationCode = a.ActivationCode,
+                                EndDate = a.EndDate,
+                                StartDate = a.StartDate
+                            };
+                            question.Activations.Add(activation);
+                        }
                         return question;
                     }
                     else
@@ -181,6 +203,5 @@ namespace JTN.SurveyMaker.BL
                 throw ex;
             }
         }
-
     }
 }

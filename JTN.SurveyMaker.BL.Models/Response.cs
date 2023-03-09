@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace JTN.SurveyMaker.BL.Models
 {
-    public class Question
+    public class Response
     {
         public Guid Id { get; set; }
-        public List<Answer> Answers { get; set; }
-        public string Text { get; set; }
-        public List<Activation> Activations { get; set; }
+        public Guid QuestionId { get; set; }
+        public Guid AnswerId { get; set; }
+        public DateTime ResponseDate { get; set; }
     }
 }
