@@ -63,5 +63,17 @@ namespace JTN.SurveyMaker.BL.Test
            
         }
 
+        [Test]
+        public void LoadTestByActivationCode()
+        {
+            Task.Run(async () =>
+            {
+                var task = await QuestionManager.Load("AAAAAA");
+                Question question = task;
+                Assert.AreEqual(1, question.Activations.Count());
+            });
+
+        }
+
     }
 }

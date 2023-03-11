@@ -23,8 +23,7 @@ namespace JTN.SurveyMaker.WPFUI
     public partial class ucAnswer : UserControl
     {
         Question question = new Question();
-        List<Answer> answers= new List<Answer>();
-        Answer answer = new Answer();
+        
         public ucAnswer(Guid questionId)
         {
             InitializeComponent();
@@ -36,17 +35,28 @@ namespace JTN.SurveyMaker.WPFUI
         private async void Reload()
         {
             cboAnswer.ItemsSource = null;
-            answers = (List<Answer>)await AnswerManager.Load(question.Id);
-            cboAnswer.ItemsSource = answers;
+            question = await QuestionManager.LoadById(question.Id);
+            cboAnswer.ItemsSource = question.Answers;
             cboAnswer.DisplayMemberPath = "Text";
             cboAnswer.SelectedValuePath = "Id";
         }
 
         private void cboAnswer_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            answer.Id = (Guid)cboAnswer.SelectedValue;
-            if (answer.isCorrect == true)
-                rdoCorrect.IsChecked = true;
+            if (cboAnswer.SelectedIndex > -1) 
+            {
+                if (question.Answers[cboAnswer.SelectedIndex].isCorrect == true)
+                    rdoCorrect.IsChecked = true;
+                else
+                    rdoCorrect.IsChecked = false;
+            }    
+        }
+
+        private async void imgDelete_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            await QuestionAnswerManager.Delete(question.Id, (Guid)cboAnswer.SelectedValue);
+            Reload();
+            cboAnswer.SelectedIndex = -1;
 
         }
     }

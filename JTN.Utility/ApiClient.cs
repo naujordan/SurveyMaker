@@ -14,7 +14,7 @@ namespace JTN.Utility
     {
         public ApiClient(string baseAddress)
         {
-            BaseAddress = new Uri(baseAddress);
+            BaseAddress = new Uri(baseAddress + "api/");
         }
 
         /// <summary>

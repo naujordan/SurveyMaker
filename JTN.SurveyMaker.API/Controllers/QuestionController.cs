@@ -72,5 +72,18 @@ namespace JTN.SurveyMaker.API.Controllers
             }
         }
 
+        [HttpGet("{activationCode}")]
+        public async Task<ActionResult<Question>> Get(string activationCode)
+        {
+            try
+            {
+                return Ok(await QuestionManager.Load(activationCode));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using JTN.SurveyMaker.BL.Models;
 using JTN.SurveyMaker.PL;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
@@ -201,6 +202,53 @@ namespace JTN.SurveyMaker.BL
             {
 
                 throw ex;
+            }
+        }
+
+        public async static Task<Question> Load(string activationCode)
+        {
+
+            try
+            {
+                Question question = new Question();
+                using (SurveyMakerEntities dc = new SurveyMakerEntities())
+                {
+                    (await dc.tblActivations
+                        .Where(v => v.ActivationCode.Contains(activationCode))
+                        .ToListAsync()
+                        .ConfigureAwait(false))
+                        .ForEach(c => question.Activations.Add(new Activation
+                        {
+                            Id = c.Id,
+                            QuestionId = c.QuestionId,
+                            StartDate = c.StartDate,
+                            EndDate = c.EndDate,
+                            ActivationCode = c.ActivationCode
+                        }));
+                    question.Id = question.Activations[0].QuestionId;
+                    tblQuestion tblQuestion = dc.tblQuestions.Where(c => c.Id == question.Id).FirstOrDefault();
+                    if (tblQuestion != null)
+                    {
+                        question.Text = tblQuestion.Question;
+                        question.Answers = new List<Answer>();
+                        foreach (tblQuestionAnswer qa in tblQuestion.tblQuestionAnswers.ToList())
+                        {
+                            Answer answer = new Answer
+                            {
+                                Id = qa.AnswerId,
+                                isCorrect = qa.isCorrect,
+                                Text = qa.Answer.Answer
+                            };
+                            question.Answers.Add(answer);
+                        }
+                    }
+                }
+                return question;
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

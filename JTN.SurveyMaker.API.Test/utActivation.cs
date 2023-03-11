@@ -28,7 +28,7 @@ namespace JTN.SurveyMaker.API.Test
         public async Task UpdateTestAsync()
         {
             Activation activation = new Activation { ActivationCode = "AAAAA2" };
-            await base.UpdateTestAsync<Activation>(new KeyValuePair<string, string>("ActivationCode", "AAAAA2"), activation);
+            await base.UpdateTestAsync<Activation>(new KeyValuePair<string, string>("ActivationCode", "AAAAAA"), activation);
         }
     }
 }

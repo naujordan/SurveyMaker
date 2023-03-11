@@ -20,7 +20,21 @@ namespace JTN.SurveyMaker.API.Test
         [TestMethod]
         public async Task LoadByIdTestAsync()
         {
-            await base.LoadByIdTestAsync<Question>(new KeyValuePair<string, string>("Question", "Who has won more NBA championships?"));
+            await base.LoadByIdTestAsync<Question>(new KeyValuePair<string, string>("Text", "Who has won more NBA championships?"));
+        }
+
+        [TestMethod]
+        public async Task InsertTestAsync()
+        {
+            Question question = new Question {Id = Guid.NewGuid(), Text = "Is this for the API test?", Activations = new List<Activation>(), Answers = new List<Answer>() };
+            await base.InsertTestAsync<Question>(question);
+        }
+
+        [TestMethod]
+        public async Task UpdateTestAsync()
+        {
+            Question question = new Question { Text = "Was this for the API test?" };
+            await base.UpdateTestAsync<Question>(new KeyValuePair<string, string>("Text", "Who has won more NBA championships?"), question);
         }
     }
 }
